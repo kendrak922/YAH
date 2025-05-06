@@ -1,0 +1,24 @@
+@use '../../abstracts' as *;
+
+
+@use "sass:map";
+@use "sass:meta";
+
+/********************************
+	DEFAULT
+********************************/
+.page__wrapper {
+	padding: $sitePaddingMobile 0;
+	@include create-mq($md-width) {
+		padding: $sitePaddingDesktop 0;
+	}
+
+	// TODO: if has announcment, add padding to the page wrapper
+	// body & {
+	// 	padding-top: calc($headerHeight_sm + rem(40));
+
+	// 	@include create-mq($md-width) {
+	// 		padding-top: calc($headerHeight_md + rem(40));
+	// 	}
+	// }
+}

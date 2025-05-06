@@ -1,0 +1,79 @@
+@use '../../../assets/src/sass/abstracts' as *;
+
+/******************************
+    BLOCK: Content Stacks
+******************************/
+// .testimonials {
+//     display: flex;
+//     flex-wrap: wrap;
+//     justify-content: flex-start;
+//     align-items: flex-start;
+//     gap: 50px
+// }
+
+// @media only screen and (max-width: 768px) {
+//     .testimonials {
+//         display: flex;
+//         flex-wrap: wrap;
+//         justify-content: flex-start;
+//         align-items: flex-start;
+//         gap: 50px
+//     }
+// }
+
+.testimonial__single {
+    max-width: 400px;
+    margin-bottom: 40px;
+
+    &-content {
+        padding: 32px 32px 50px 120px;
+        position: relative;
+        &::before {
+            content: '';
+            background-image: url('/wp-content/themes/bansheeStarter/assets/dist/imgs/icons/icon-quote.png');
+            background-repeat: no-repeat;
+            background-size: contain;
+            bottom: 100%;
+            display: block;
+            height: 2.5rem;
+            left: 32px;
+            margin: 0;
+            position: absolute;
+            top: 32px;
+            width: 2.5rem;
+        
+            @include create-mq($md-width) {
+                height: 3rem;
+                width: 3rem;
+            }
+    
+            .wp-admin & {
+                top:0;
+            }
+        }
+    }
+
+    &-image {
+        display: flex;
+        align-items: flex-end;
+    }
+
+    &-author {
+        margin-top: 24px;
+    }
+
+    img {
+        width: 100%;
+        flex-grow: 0;
+    }
+
+    [data-atom='heading']{
+        max-width: fit-content;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .testimonial__single {
+        flex-basis: 100%;
+    }
+}
