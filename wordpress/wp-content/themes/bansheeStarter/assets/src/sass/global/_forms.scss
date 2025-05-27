@@ -468,3 +468,18 @@ label {
 		margin-bottom: 65px;
 	}
 }
+
+.bf-req-smbl {
+    color: swatch('Red')!important;
+}
+
+textarea {
+    height: 162px!important;
+	@include create-mq($md-width) {
+		height: 277px;
+	}
+}
+
+body:not(.wp-admin) main .bf-err-txt {
+    font-size: 1rem!important;
+}

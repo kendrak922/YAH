@@ -21,8 +21,55 @@
 
     ?>
     
-<section class="section">
-<div class="testimonial" data-masonry='{ "itemSelector": ".testimonial__single", "columnWidth": 400, "gutter": 40 }'>
+<section class="swiper u-lg-hidden">
+<div class="testimonial swiper-wrapper">
+    <?php if (have_rows('testimonial')) : ?>
+        <?php while(have_rows('testimonial')) :
+            the_row();
+            $image = get_sub_field('image');
+            $emphasized_text = get_sub_field('emphasized_text');
+            $text = get_sub_field('text');
+            $author = get_sub_field('author');
+            ?>
+                <div class="testimonial__single swiper-slide">
+                    <?php if($image) : ?>
+                        <div class="testimonial__single-image">
+                            <img src="<?php echo $image['url']; ?>"  />
+                        </div>
+                    <?php endif; ?>
+                    <div class="testimonial__single-content u-bgColorLightBlue">
+                        <?php 
+                        if($emphasized_text) : 
+                            // heading
+                            Load::atom(
+                                'text/heading',
+                                [
+                                    'heading'         =>  $emphasized_text,
+                                    'heading_level'   => 'h3',
+                                    'heading_style'   => 'display-quote'
+                                ]
+                            );
+                        endif;
+                        ?>
+                        <?php 
+                        if ($text) :
+                            echo $text; 
+                        endif;
+                        ?>
+                        <?php 
+                        if ($author) :
+                            echo '<p class="testimonial__single-author">— '.$author.'</p>'; 
+                        endif;
+                        ?> 
+                    </div>
+                </div>
+        <?php endwhile; ?>
+    <?php endif; ?>
+</div>
+<div class="swiper-pagination"></div>
+</section>
+<section class="section u-hidden u-lg-block">
+<div class="testimonial testimonial--desktop">
     <?php if (have_rows('testimonial')) : ?>
         <?php while(have_rows('testimonial')) :
             the_row();
@@ -66,4 +113,5 @@
         <?php endwhile; ?>
     <?php endif; ?>
 </div>
+
 </section>

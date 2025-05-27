@@ -55,7 +55,7 @@ $footer_email = get_field("email", 'option');
             <div class="footer__content">
                         <?php if($footer_email) : ?>
                             <div class="footer__contact">
-                                <h2 class="h4">Contact</h2>
+                                <h2 class="h4 u-">Contact</h2>
                                 <a href="mailto:<?php echo $footer_email; ?>"><?php echo $footer_email;?></a>
                             </div>
                         <?php endif; ?>

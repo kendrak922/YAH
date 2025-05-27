@@ -95,16 +95,63 @@
           "fontWeight": true,
           "fontSizes": [],
           "fontFamilies": []
-        }
+        },
+        "color": {
+          "text": true,
+          "background": true
+      }
       },
       "core/paragraph": {
         "typography": {
           "fontWeight": true,
-          "fontSizes": [],
-          "fontFamilies": [],
-          "color": {
-            "text": true
-        }
+          "fontSizes": [ {
+            "name": "Small",
+            "slug": "small",
+            "size": ".75rem"
+          },
+          {
+            "name": "Medium",
+            "slug": "medium",
+            "size": "1rem"
+          },
+          {
+            "name": "Large",
+            "slug": "large",
+            "size": "1.25rem"
+          },
+          {
+            "name": "XL (24)",
+            "slug": "extra-large",
+            "size": "1.5rem"
+          }
+          ],
+          "fontFamilies": [
+            {
+              "fontFamily": "Instrument Sans",
+              "name": "Instrument Sans",
+              "slug": "Instrument Sans"
+            },
+            {
+              "fontFamily": "Vina Sans",
+              "name": "Vina Sans",
+              "slug": "vina_sans"
+            },
+            {
+              "fontFamily": "Rouge Script",
+              "name": "Rouge Script",
+              "slug": "rouge_script"
+            },
+            {
+              "fontFamily": "DM Serif Display",
+              "name": "DM Serif Display",
+              "slug": "dm_serif_display"
+            }
+          ]
+      },
+      "color": {
+        "background": true,
+        "link": true,
+        "text": true
       }
     },
       "core/post-title": {

@@ -30,7 +30,7 @@
 // 	FOOTER
 // ********************************/
 .footer {
-    font-weight: 500;
+    font-weight: 400;
     line-height: 1.2em;
     margin-top: 50px;
     position: relative;
@@ -43,14 +43,22 @@
         height: 20px;
         display: inline-block;
         position: absolute;
-        top: -20px;
+        background-size: 154;
+        top: -18px;
     }
 
     //
     // * Logo
     //
     &__logo {
-        max-width: 340px;
+        max-width: 260px;
+        margin: 0 auto;
+        @include create-mq($md-width) {
+            margin-right: auto;
+            max-width: 340px;
+            text-align: left;
+            gap: 45px;
+        }
     }
 
     &__graphic {
@@ -59,6 +67,10 @@
 
     .container {
         display: grid;
+        @include create-mq($lg-width) {
+            grid-template-columns: 340px 500px auto;
+            column-gap: 100px;
+        }
     }
 
     //
@@ -88,7 +100,9 @@
         margin-top: 40px;
 
         @include create-mq($md-width) {
-            grid-row-gap: 40px;
+            grid-row-gap: 0;
+            justify-content: flex-start;
+            align-items: center;
             margin: 0;
         }
 
@@ -96,64 +110,75 @@
             position: relative;
             text-decoration: none;
             &:hover {
-                &:after {
-                    content: "";
-                    width: 100%;
-                    background-image: url("/wp-content/themes/bansheeStarter/assets/dist/imgs/icons/icon-underline.png");
-                    display: inline-block;
-                    height: 5px;
-                    background-size: contain;
-                    background-repeat: repeat-x;
-                    position: absolute;
-                    bottom: -7px;
-                    left: 0;
-                }
+                opacity: 50%;
             }
 
         }
     }
 
     &__contact {
-        max-width: 22rem;
-        padding-bottom: 2.5rem;
+        max-width: 100%;
+        text-align: center;
 
         @include create-mq($md-width) {
+            max-width: 22rem;
+            padding-bottom: 2.5rem;
             padding: unset;
+            text-align: left;
         }
     }
 
     &__text {
         display: flex;
-        align-items: flex-end;
-        max-width: 400px;
-        gap: 40px;
+        align-items: center;
+        margin: 0 auto;
+        max-width: 80%;
+        flex-flow: column;
+        align-items: center;
         text-align: center;
+        gap: 16px;
 
         @include create-mq($md-width) {
+            max-width: 300px;
             text-align: left;
+            margin-right: auto;
+            align-items: flex-end;
+            flex-flow: row;
             gap: 45px;
+        }
+        @include create-mq($xl-width) {
+            max-width: 400px;
         }
     }
 
     &__bottom {
         display: flex;
         justify-content: space-between;
-        align-items: end;
-        grid-row-start: 2;
-        grid-column-start: 1;
-        grid-column-end: 3;
+        align-items: center;
+        flex-flow: column;
+        @include create-mq($md-width) {
+            flex-flow: row;
+            align-items: end;
+            grid-row-start: 2;
+            grid-column-start: 1;
+            grid-column-end: 4;
+        }
 
     }
 
     &__attribute {
-        margin-top: 60px;
+        margin-top: 16px;
         grid-column: 1 / span 2;
         align-self: center;
-        margin-right: 20px;
+        margin-right: 0;
         line-height: 150%;
+        align-self: center;
 
         @include create-mq($md-width) {
-            margin-right: 0;
+            align-self: flex-end;
+        }
+        &:first-child {
+            margin-top: 60px;
         }
     }
 
@@ -163,9 +188,11 @@
 
     &__social {
         padding: 0;
+        text-align: center;
 
         @include create-mq($md-width) {
             padding-top: 2.5rem;
+            text-align: left;
             border: none;
             padding: unset;
         }

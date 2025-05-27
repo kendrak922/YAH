@@ -4,17 +4,26 @@
     BLOCK: Hero Banner
 ******************************/
 section.block--hero-banner {
-    padding: 0;
     background-repeat: no-repeat;
+    background-size: contain;
+    margin-left: 20px;
+    margin-right: 20px;
 
     @include create-mq($md-width) {
-        padding: 2.5rem 0;
+        margin-left: auto;
+        margin-right: auto;
         min-height: 33rem;
+        padding-top: 140px;
+        background-size: cover;
     }
 
     @include create-mq($lg-width) {
-        padding: $block-padding 0;
-        min-height: 90vh;
+        min-height: 60vh;
+        margin: 0 auto;
+    }
+
+    @include create-mq($xl-width) {
+        min-height: 85vh;
         margin: 0 auto;
     }
 
@@ -62,17 +71,30 @@ section.block--hero-banner {
     }
 
     &__content {
-        max-width: 500px;
+        max-width: 560px;
         position: relative;
-
+        padding: 20px;
+        bottom: -64px;
+        // right: 10px;
+        margin-bottom: 80px;
+        @include create-mq($sm-width) {
+            bottom: -80px;
+        }
         @include create-mq($md-width) {
             padding: 48px 20px 48px 48px;
+            bottom: -160px;
+            right: auto;
         }
-
+        @include create-mq($lg-width) {
+            bottom: auto;
+        }
         img {
-            right: 50px;
+            right: 0;
             max-width: 76px;
             position: absolute;
+            @include create-mq($md-width) {
+                right: 50px;
+            }
         }
     }
 

@@ -37,7 +37,7 @@ class Functions__Scroll {
         )
 
         // Add the 'active' class to the corresponding link
-        console.log(sectionId, 'sectionId')
+        // console.log(sectionId, 'sectionId')
         const activeLink = document.querySelector(
           `#table_of_contents a[href="#${sectionId}"]`
         )

@@ -64,12 +64,12 @@ add_action('after_setup_theme', 'gutenberg_removals');
 add_theme_support( 'editor-color-palette', array(
     array(
         'name'  => esc_attr__( 'white', 'themeLangDomain' ),
-        'slug'  => 'white',
+        'slug'  => 'White',
         'color' => '#F4E9DC',
     ),
     array(
         'name'  => esc_attr__( 'black', 'themeLangDomain' ),
-        'slug'  => 'black',
+        'slug'  => 'Black',
         'color' => '#211B20',
     ),
     array(
@@ -79,27 +79,27 @@ add_theme_support( 'editor-color-palette', array(
     ),
      array(
         'name'  => esc_attr__( 'brand: light-blue', 'themeLangDomain' ),
-        'slug'  => 'light-blue',
+        'slug'  => 'LightBlue',
         'color' => '#D1E7EC',
     ),
     array(
         'name'  => esc_attr__( 'brand: dark-blue', 'themeLangDomain' ),
-        'slug'  => 'dark-blue',
+        'slug'  => 'DarkBlue',
         'color' => '#004169;',
     ),
      array(
-        'name'  => esc_attr__( 'brand: orange', 'themeLangDomain' ),
-        'slug'  => 'red',
+        'name'  => esc_attr__( 'brand: red', 'themeLangDomain' ),
+        'slug'  => 'Red',
         'color' => '#9A0007',
     ),
      array(
-        'name'  => esc_attr__( 'yellow', 'themeLangDomain' ),
-        'slug'  => 'green',
+        'name'  => esc_attr__( 'brand: green', 'themeLangDomain' ),
+        'slug'  => 'Green',
         'color' => '#ACB568',
     ),
      array(
-        'name'  => esc_attr__( 'green', 'themeLangDomain' ),
-        'slug'  => 'light-green',
+        'name'  => esc_attr__( 'brand: light-green', 'themeLangDomain' ),
+        'slug'  => 'LightGreen',
         'color' => '#CBD19D',
     )   
 ) );

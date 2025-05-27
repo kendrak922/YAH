@@ -35,7 +35,7 @@ $grid-unit: 0.25rem;
 $grid-columns: 12;
 
 // Grid gutters
-$grid-gutter: 2rem; //32
+$grid-gutter: 2rem; // 32
 $grid-gutter-narrow: 1rem; //16
 $grid-gutter-wide: 2.5rem; //40
 $grid-gutter-ultra-wide: 8.75rem; //60
@@ -48,22 +48,22 @@ $grid-gutter-props: (
 
 // Container elements
 
-$container-width: 72rem; 
-$container-width-wide: 84rem; // 1200px = 75rem
-$container-ultra-wide: 99rem; // 1440px = 75rem + 9rem 
-$container-width-narrow: 49.5rem; // 648 = 40.5rem + 9rem
-$container-width-ultra-narrow: 45rem; // 576 = 36rem + 9rem
+$container-width: 79rem; // 1264 - 32
+$container-width-wide: 84rem; 
+$container-ultra-wide: 99rem;
+$container-width-narrow: 62.5rem;
+$container-width-ultra-narrow: 49.5rem;
 //840
 
 $container-width-wide-content: 61.5rem; // 840 = 52.5rem + 9rem (cta)
 $container-width-wide-media : 73.5rem; //1032 = 64.5rem + 9
 
-$container-padding: 4.5rem; //72
+$container-padding: 2rem; //72
 $container-padding-tablet: 2rem; //32
 $container-padding-mobile: 1.5rem; //24
 
 // Breakpoints
-$xs-width: 20rem; //320px;
+$xs-width: 21.5rem; //342px;
 $sm-width: 31.25rem; //500px;
 $md-width: 48rem; //768px;
 $lg-width: 64rem; //1024px;
@@ -85,7 +85,7 @@ $map-width-props: (
 //////////////////
 
 $color-primary: #004169;
-$color-secondary: #F6F7F9;
+$color-secondary: #D1E7EC;
 $color-tertiary: #9A0007;
 
 // Basics
@@ -103,6 +103,7 @@ $palette: (
   'Tertiary': $color-tertiary,
   // Text color
   'Neutral': $color-primary,
+  'LightNeutral' : #F6F7F9,
   // Style Guide
   "DarkBlue" : #004169,
   "LightBlue" : #D1E7EC,

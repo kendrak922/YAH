@@ -30,6 +30,8 @@ if (isset($button['button_style'])) {
     $button['classes'] .= ' btn--' . $button['button_style'] . ' ';
     if ($button['button_style'] === 'solid') :
         $button['classes'] .= ' btn--primary ';
+    elseif ($button['button_style'] === 'seconday') :
+            $button['classes'] .= ' btn--solid ';
     elseif ($button['button_style'] === 'border') :
         $button['classes'] .= ' btn--outline ';
     endif;

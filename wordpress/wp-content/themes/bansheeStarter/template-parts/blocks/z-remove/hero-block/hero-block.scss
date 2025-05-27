@@ -6,8 +6,10 @@
 section.block--hero-block {
     position: relative;
     overflow: hidden;
+    background-size: contain;
 
     @include create-mq($lg-width) {
+        background-size: cover;
         &.has-image{
             min-height:54rem;
         }
@@ -48,12 +50,14 @@ section.block--hero-block {
     }
 
     .hero-block__content {
+        padding: 32px;
+        bottom: -100px;
+        margin-bottom: 40px;
         @include create-mq($md-width) {
             max-width: 67%;
             padding-right: 4.5rem;
-        }
-        .hero-banner__content {
-            max-width: 550px;
+            bottom: auto;
+            margin-bottom: 0;
             padding: 52px 48px;
         }
         

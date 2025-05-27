@@ -17,13 +17,13 @@
                 "id": ""
             },
             "choices": {
-                "white": "White",
-                "black": "Black",
-                "light-blue": "Light Blue",
-                "dark-blue": "Dark Blue",
-                "red": "Red",
-                "green": "Green",
-                "light-green": "Light Green"
+                "White": "White",
+                "Black": "Black",
+                "LightBlue": "Light Blue",
+                "DarkBlue": "Dark Blue",
+                "Red": "Red",
+                "Green": "Green",
+                "LightGreen": "Light Green"
             },
             "default_value": "",
             "return_format": "value",
@@ -204,7 +204,8 @@
                         "id": ""
                     },
                     "choices": {
-                        "solid": "Solid",
+                        "solid": "Solid - Dark Blue",
+                        "secondary": "Solid - Light Blue",
                         "border": "Border",
                         "arrow": "Arrow"
                     },
@@ -700,5 +701,5 @@
     "active": false,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1746116842
+    "modified": 1746625462
 }

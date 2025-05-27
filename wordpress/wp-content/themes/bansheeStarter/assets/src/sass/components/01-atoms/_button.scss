@@ -9,14 +9,14 @@
 ********************************/
 $buttonRadius : 0;
 $btnDefault: (
-	'textColor': swatch('Secondary'),
+	'textColor': swatch('LightNeutral'),
 	'bgColor': swatch('Primary'),
 	'borderColor': swatch('Primary'),
-	'hoverTextColor':swatch('Secondary'),
+	'hoverTextColor':swatch('LightNeutral'),
 	'hoverBgColor': swatch('PrimaryHover'),
 	'hoverBorderColor': swatch('PrimaryHover'),
 	'disabled': swatch('Gray'),
-	'disabledTextColor': swatch('Gray'),
+	'disabledTextColor': swatch('Neutral'),
 	'activeBgColor': swatch('Neutral'),
 	'activeBorderColor': swatch('Neutral'),
 	'activeTextColor': swatch('Neutral'),
@@ -60,7 +60,7 @@ $btnWhite: (
 	color: map.get($button, 'textColor');
 	display: inline-flex;
 	font-family: $font-stack-primary;
-	font-size: 1.25rem;
+	font-size: 1rem;
 	font-weight: $font-weight-medium;
 	gap:.5rem;
 	letter-spacing: kern(60);
@@ -203,10 +203,10 @@ $btnWhite: (
 	Button - SOLID
 ********************************/
 $btnSolidDefault: (
-	'textColor': swatch('Secondary'),
+	'textColor': swatch('LightNeutral'),
 	'bgColor': swatch('Primary'),
 	'borderColor': swatch('Primary'),
-	'hoverTextColor': swatch('Secondary'),
+	'hoverTextColor': swatch('LightNeutral'),
 	'hoverBgColor': swatch('PrimaryHover'),
 	'hoverBorderColor': swatch('PrimaryHover'),
 	'disabled': swatch('Gray'),
@@ -272,6 +272,7 @@ $btnSolidWhite: (
 // 	color: $color-white;
 // }
 .btn--secondary {
+	text-decoration: none;
 	@include btnColors($btnSolidSecondary);
 	padding: 0.5rem 1rem 0.5rem;
 }
@@ -469,8 +470,9 @@ $btnArrowDark: (
 .btn[data-size='medium'] {
 	@include create-mq($md-width) {
 		font-size: $font-base;
+		font-weight: 500;
 		line-height: 1.5;
-		padding: 0.65rem 1.5rem;
+		padding: 1rem 2rem;
 		.icon {
 			margin-left: -0.25rem;
 		}
@@ -492,6 +494,8 @@ $btnArrowDark: (
 /***** LAYOUTS *****/
 .btn--full {
 	width: 100%;
+	display: block;
+    text-align: center;
 }
 
 /***** LAYOUTS *****/

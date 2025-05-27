@@ -11,18 +11,18 @@ add_filter('mce_buttons_2', 'bansheeStarter_add_style_select_buttons');
 function bansheeStarter_my_custom_styles($init_array)
 {
     // text formats
-    // $block_formats = array(
-    //     'Paragraph=p',
-    //     'Heading 1=h1',
-    //     'Heading 2=h2',
-    //     'Heading 3=h3',
-    //     'Heading 4=h4',
-    //     'Heading 5=h5',
-    //     'Heading 6=h6',
-    //     'Cite=cite',
-    //     'Preformatted=pre',
-    // );
-    // $init_array['block_formats'] = implode(';', $block_formats);
+    $block_formats = array(
+        'Paragraph=p',
+        'Heading 1=h1',
+        'Heading 2=h2',
+        'Heading 3=h3',
+        'Heading 4=h4',
+        'Heading 5=h5',
+        'Heading 6=h6',
+        'Cite=cite',
+        'Preformatted=pre',
+    );
+    $init_array['block_formats'] = implode(';', $block_formats);
 
     // text styles
     $style_formats = array(

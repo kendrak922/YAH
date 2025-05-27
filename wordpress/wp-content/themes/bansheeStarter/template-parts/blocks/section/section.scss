@@ -30,21 +30,22 @@
             height: 20px;
             display: inline-block;
             position: absolute;
+            background-size: 154px;
         }
 
         &:before {
-            top: -20px;
+            top: -19px;
         }
 
         &:after {
-            bottom: -20px;
+            bottom: -19px;
             transform: scale(-1, -1);
         }
     }
     &.u-bgColorLightBlue.block--edgePattern-wave {
         margin: 100px 0;
         &:before, &:after {
-            background-image: url("/wp-content/themes/bansheeStarter/assets/dist/imgs/wavesection-dkblue.svg");
+            background-image: url("/wp-content/themes/bansheeStarter/assets/dist/imgs/wavesection-medblue.svg");
         }
     }
 } // close: .block--section

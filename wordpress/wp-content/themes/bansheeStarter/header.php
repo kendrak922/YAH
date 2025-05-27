@@ -35,8 +35,9 @@ if ($header_button_link) {
     <title><?php wp_title(''); ?></title>
     <link rel="profile" href="http://gmpg.org/xfn/11" />
     <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
-    <meta name="statuscake" />
-
+    <meta name="statuscake" /><!-- or -->
+<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.js"></script>
+<script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
     <!-- add additional scripts and stylesheets to my_add_theme_scripts() in functions.php -->
     <?php if (is_singular() && get_option('thread_comments')) { wp_enqueue_script('comment-reply');
     } ?>
@@ -101,7 +102,6 @@ if ($header_button_link) {
                                         <span class="menu-toggle__icon"></span>
                                         <span class="menu-toggle__icon"></span>
                                         <span class="menu-toggle__icon"></span>
-                                        <div class="menu-toggle__label">Menu</div>
                                     </div>
                                 </span>
 

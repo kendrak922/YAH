@@ -26,7 +26,10 @@ $menuHeight: (
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    align-items: flex-start;
+    align-items: center;
+    @include create-mq($md-width) {
+      align-items: flex-start;
+  }
 
     a {
       padding: 0;
@@ -52,11 +55,9 @@ $menuHeight: (
   li {
     margin: 0;
     padding: 0;
-    width: 100%;
 
     @include create-mq($lg-width) {
       position: relative;
-      width: auto;
     }
   }
 
@@ -95,18 +96,7 @@ $menuHeight: (
       }
 
       &:not(.btn--primary) a:hover {
-        &:after {
-          content: "";
-          width: 100%;
-          background-image: url("/wp-content/themes/bansheeStarter/assets/dist/imgs/icons/icon-underline.png");
-          display: inline-block;
-          height: 5px;
-          background-size: contain;
-          background-repeat: repeat-x;
-          position: absolute;
-          bottom: 5px;
-          left: 0;
-        }
+        opacity: 50%;
       }
 
       &.is-active,
@@ -182,7 +172,7 @@ $menuHeight: (
     }
 
     .sub-menu {
-      border-top: .5px swatch('Black') solid;
+      border-top: .5px swatch('DarkBlue') solid;
       display: none;
       font-size: 1rem;
       position: relative;
@@ -261,22 +251,27 @@ $menuHeight: (
         @include font.largeNav();
         margin-top: rem(50);
         flex-direction: column;
-        gap: rem(30);
+        gap: rem(75);
+        align-items: center;
 
         li a {
           text-align: center;
+        }
+        .btn--primary a {
+          font-family: $font-stack-primary;
+          font-size: 1rem;
+          padding: 8px 20px;
         }
       }
 
       @include create-mq($lg-width) {
         margin-top: 0;
-        gap: 2rem;
+        gap: 4rem;
         flex-direction: row;
         align-items: flex-start;
       }
 
       @include create-mq($xl-width) {
-        gap: rem(30);
         font-size: 1rem;
       }
 
@@ -286,7 +281,7 @@ $menuHeight: (
         &>.sub-menu--toggle-contain {
           @include create-mq($lg-width) {
             font-size: 1rem;
-            padding: 0.75rem 1.5rem;
+            padding: 1rem 2rem;
 
             button {
               display: none !important; // remove to allow desktop dropdown
@@ -356,8 +351,7 @@ $menuHeight: (
 
 /* Mobile Menu Wrapper: Contains the mobile menu functionality */
 header .menu-wrapper--main {
-  background: swatch('Black');
-  color: swatch('White');
+  background: swatch('LightBlue');
   display: flex;
   flex-direction: column;
   height: calc(100vh - map.get($menuHeight, 'sm'));
@@ -373,10 +367,6 @@ header .menu-wrapper--main {
   visibility: hidden;
   width: 100%;
 
-  @include create-mq($md-width) {
-    max-width: 30rem;
-    color: swatch('Black');
-  }
 
   @include create-mq($lg-width) {
     align-items: center;
@@ -467,7 +457,7 @@ header .menu-wrapper--main {
 
 .menu-toggle {
   cursor: pointer;
-  height: 45px;
+  height: 30px;
   position: relative;
   transform: rotate(0deg);
   transition: 0.5s ease-in-out;
@@ -493,7 +483,7 @@ header .menu-wrapper--main {
   }
 
   &__icon {
-    background: swatch('Black');
+    background: swatch('DarkBlue');
     display: block;
     height: 4px;
     border-radius: 2px;

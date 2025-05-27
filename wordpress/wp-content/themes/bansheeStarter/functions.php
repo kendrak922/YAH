@@ -399,7 +399,7 @@ function my_allowed_block_types($allowed_block_types_all, $post)
 
     return $allowed;
 }
-// add_filter('allowed_block_types_all', 'my_allowed_block_types', 10, 2);
+add_filter('allowed_block_types_all', 'my_allowed_block_types', 10, 2);
 
 
 /*************************************************************

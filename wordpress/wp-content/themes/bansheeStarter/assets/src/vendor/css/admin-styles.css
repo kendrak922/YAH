@@ -103,34 +103,34 @@ Add interface colored swatches to ACF picker
   border-color: #ccc;
 }
 
-.acf-radio-list > li > label:has(input[type=radio][value=white]) {
+.acf-radio-list > li > label:has(input[type=radio][value=White]) {
   background-color:  #F5F9FF;
   border-color: #ccc;
 }
 
-.acf-radio-list > li > label:has(input[type=radio][value=light-blue]) {
+.acf-radio-list > li > label:has(input[type=radio][value=LightBlue]) {
   background-color: #D1E7EC;
   border-color: #D1E7EC;
 }
 
-.acf-radio-list > li > label:has(input[type=radio][value=dark-blue]) {
+.acf-radio-list > li > label:has(input[type=radio][value=DarkBlue]) {
   background-color: #004169;
   border-color: #004169;
   color: #fff;
 }
 
-.acf-radio-list > li > label:has(input[type=radio][value=red]) {
+.acf-radio-list > li > label:has(input[type=radio][value=Red]) {
   background-color: #9A0007;
   border-color: #9A0007;
   color: #fff;
 }
 
-.acf-radio-list > li > label:has(input[type=radio][value=light_green]) {
+.acf-radio-list > li > label:has(input[type=radio][value=LightGreen]) {
   background-color: #CBD19D;
   border-color: #CBD19D;
 }
 
-.acf-radio-list > li > label:has(input[type=radio][value=green]) {
+.acf-radio-list > li > label:has(input[type=radio][value=Green]) {
   background-color: #ACB568;
   border-color: #ACB568;
 }

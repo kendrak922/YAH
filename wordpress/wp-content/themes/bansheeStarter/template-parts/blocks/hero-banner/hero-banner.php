@@ -53,7 +53,7 @@ if (isset($blockData['background_image'])) {
 }
 
 $blockData['classes'][] = 'u-bgMedia';
-$blockData['classes'][] = 'container--'.$blockData['width'];
+$blockData['classes'][] = 'container--layout container--'.$blockData['width'];
 // BLOCK :: RENDER
 ?>
 
