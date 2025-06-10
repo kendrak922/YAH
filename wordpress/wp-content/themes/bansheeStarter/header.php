@@ -36,15 +36,12 @@ if ($header_button_link) {
     <link rel="profile" href="http://gmpg.org/xfn/11" />
     <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
     <meta name="statuscake" /><!-- or -->
-<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.js"></script>
-<script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.js"></script>
+    <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
     <!-- add additional scripts and stylesheets to my_add_theme_scripts() in functions.php -->
     <?php if (is_singular() && get_option('thread_comments')) { wp_enqueue_script('comment-reply');
     } ?>
     <?php wp_head(); ?>
-    <!-- START: Font links  -->
-    <link rel="stylesheet" href="https://use.typekit.net/vlo7pol.css">
-    <!-- END: Font links  -->
     <!-- START: FAVICON -->
     <link rel="apple-touch-icon" href="<?php echo $themeGlobals['theme_url']; ?>/favicons/apple-touch-icon.png">
         <link rel="icon" type="image/png" sizes="512x512"  href="<?php echo $themeGlobals['theme_url']; ?>/favicons/android-chrome-512x512.png">
@@ -98,11 +95,11 @@ if ($header_button_link) {
                             <div class=" header-bar__item">
 
                                 <span class="u-lg-hidden u-marginLeft6gu">
-                                    <div id="menu-toggle" class="menu-toggle" aria-label="Open the Menu" aria-expanded="false" tabindex="0">
+                                    <button id="menu-toggle" class="menu-toggle" aria-label="Open the Menu" aria-expanded="false" aria-controls="menu" tabindex="0">
                                         <span class="menu-toggle__icon"></span>
                                         <span class="menu-toggle__icon"></span>
                                         <span class="menu-toggle__icon"></span>
-                                    </div>
+                                    </button>
                                 </span>
 
                                 <div id="menu_container" class="menu-wrapper menu-wrapper--main" aria-hidden="false">

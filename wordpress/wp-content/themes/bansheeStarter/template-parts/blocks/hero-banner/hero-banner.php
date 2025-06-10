@@ -66,7 +66,7 @@ $blockData['classes'][] = 'container--layout container--'.$blockData['width'];
                 template="<?php echo esc_attr(wp_json_encode($blocks_template)); ?>" 
             />
             <?php if($blockData['accent_image']) : ?>
-                <img src="<?php echo $blockData['accent_image']['url']; ?>" />
+                <img alt="" loading="eager" class="skip-lazy" src="<?php echo $blockData['accent_image']['url']; ?>" />
             <?php endif; ?>
         </div>
     </div>

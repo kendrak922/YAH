@@ -34,7 +34,7 @@
                 <div class="testimonial__single swiper-slide">
                     <?php if($image) : ?>
                         <div class="testimonial__single-image">
-                            <img src="<?php echo $image['url']; ?>"  />
+                            <img alt="" src="<?php echo $image['url']; ?>"  />
                         </div>
                     <?php endif; ?>
                     <div class="testimonial__single-content u-bgColorLightBlue">
@@ -81,7 +81,7 @@
                 <div class="testimonial__single u-bgColorLightBlue">
                     <?php if($image) : ?>
                         <div class="testimonial__single-image">
-                            <img src="<?php echo $image['url']; ?>"  />
+                            <img class="skip-lazy" src="<?php echo $image['url']; ?>"  />
                         </div>
                     <?php endif; ?>
                     <div class="testimonial__single-content">
