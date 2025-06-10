@@ -36,9 +36,9 @@
                     <?php if($image) : ?>
                         <div class="content-stack__single-image">
                         <?php if ($button) : ?>
-                            <a href="<?php echo $button['button_link']['url']; ?>">
+                            <a aria-label="go to <?php echo $title;?>" href="<?php echo $button['button_link']['url']; ?>">
                         <?php endif ; ?>
-                            <img src="<?php echo $image['url']; ?>"  />
+                            <img alt="<?php $image['alt']; ?>" src="<?php echo $image['url']; ?>"  />
                         <?php if ($button) : ?>
                             </a>
                         <?php endif; ?>
